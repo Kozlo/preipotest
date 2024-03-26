@@ -1,21 +1,28 @@
 'use client';
-import { FC } from 'react';
-
-// components
-import { Balance } from '@/app/components/content/send/all-balances/balance/balance';
+import { FC, useContext } from 'react';
 
 // constants
 import {
-  ETH_ADDRESS,
   ETH_NAME,
-  TOKEN_ADDRESS,
-  TOKEN_NAME,
-} from '@/app/components/content/send/all-balances/constants';
+  TOKEN_NAME ,
+} from '@/app/constants';
+
+// components
+import { BalanceContext } from '@/app/components/content/action/balance-context';
+
+// components
+import { TotalBalance } from '@/app/components/content/action/all-balances/total-balance';
 
 /**
  * Container component for displaying all balances
  */
 export const AllBalances: FC = () => {
+  const balances = useContext(BalanceContext)
+
+  if (!balances) {
+    return null;
+  }
+
   // TODO: add proper styling
   return (
     <div style={{
@@ -23,12 +30,12 @@ export const AllBalances: FC = () => {
       flexDirection: 'column',
       gap: '1rem',
     }}>
-      <Balance
-        address={ETH_ADDRESS}
+      <TotalBalance
+        balance={balances[ETH_NAME].balance}
         name={ETH_NAME}
       />
-      <Balance
-        address={TOKEN_ADDRESS}
+      <TotalBalance
+        balance={balances[TOKEN_NAME].balance}
         name={TOKEN_NAME}
       />
     </div>
