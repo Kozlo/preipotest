@@ -2,9 +2,12 @@
 
 import { FC } from 'react';
 import { useAccount, useConnect } from 'wagmi';
-import { AllBalances } from '@/app/components/content/all-balances/all-balances';
-import { ConnectButton } from '@/app/components/content/connect-button/connect-button';
 
+// components
+import { ConnectButton } from '@/app/components/content/connect-button/connect-button';
+import { Action } from '@/app/components/content/action';
+
+// constants
 const META_MASK = 'MetaMask';
 
 export const Content: FC = () => {
@@ -23,7 +26,7 @@ export const Content: FC = () => {
           connector={metamaskConnector}
         />
       ) : (
-        <AllBalances/>
+        <Action/>
       )}
     </div>
   );

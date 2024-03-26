@@ -2,7 +2,7 @@
 import { FC } from 'react';
 
 // components
-import { Balance } from '@/app/components/content/all-balances/balance/balance';
+import { Balance } from '@/app/components/content/send/all-balances/balance/balance';
 
 // constants
 import {
@@ -10,7 +10,7 @@ import {
   ETH_NAME,
   TOKEN_ADDRESS,
   TOKEN_NAME,
-} from '@/app/components/content/all-balances/constants';
+} from '@/app/components/content/send/all-balances/constants';
 
 /**
  * Container component for displaying all balances

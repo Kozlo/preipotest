@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { BalanceAddress } from '@/app/types/index.type';
 
 // hooks
-import { useGetBalance } from '@/app/components/content/all-balances/balance/hooks/get-balance.hook';
+import { useGetBalance } from '@/app/components/content/send/all-balances/balance/hooks/get-balance.hook';
 
 /**
  * Balance component.
