@@ -15,8 +15,6 @@ import { useGetAllBalances } from '@/app/components/content/action/hooks/get-all
 export const Action = () => {
   const {  balances, loading} = useGetAllBalances();
 
-  console.log('balances',balances)
-
   if (loading) {
     // TODO: replace with proper loading spinner
     // TODO: add proper styling
