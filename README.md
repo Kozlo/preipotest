@@ -7,3 +7,5 @@ Then, run the development server:
 ```bash
 yarn dev
 ```
+Incomplete tasks:
+- I managed to figure out how to use wagami's sendTransaction, but I couldn't figure out how to send the fake token. I tried using writeContract, but did not succeed within the allocated time.
