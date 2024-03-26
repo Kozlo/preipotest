@@ -1,0 +1,24 @@
+.sendButtonContainer {
+  width: 100%;
+}
+
+.sendButtonText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.sendButton {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  color: white;
+  background-color: #6264D9;
+  height: 48px;
+  border-radius: 16px;
+  border-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #6254C1;
+  }
+}

@@ -7,19 +7,21 @@ import { Content } from '@/app/components';
 
 // styles
 import styles from './page.module.css'
+import './styles.scss';
+
 /**
  * Main application component
  */
 function App() {
   return (
     <div className={styles.contentContainer}>
-      {/*TODO: remove when done testing*/}
-      <Account/>
+      {/*/!*TODO: remove when done testing*!/*/}
+      {/*<Account/>*/}
       <br/>
       <Content/>
       {/*TODO: remove when done testing*/}
-      <br/>
-      <Status/>
+      {/*<br/>*/}
+      {/*<Status/>*/}
     </div>
   );
 }

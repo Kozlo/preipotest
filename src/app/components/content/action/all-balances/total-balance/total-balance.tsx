@@ -4,6 +4,9 @@ import { FC } from 'react';
 // types
 import { BalanceValue } from '@/app/types/index.type';
 
+// styles
+import styles from './total-balance.module.scss';
+
 /**
  * Balance component.
  *
@@ -16,7 +19,7 @@ export const TotalBalance: FC<{
   // TODO: add proper styling
   return (
     <div>
-      {name} balance: {balance !== null ? balance.toString() : 'n/a'}
+      <span className={styles.name}>{name} Balance:</span> <span className={styles.balance}>{balance !== null ? balance.toString() : 'n/a'}</span>
     </div>
   );
 };

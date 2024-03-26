@@ -18,6 +18,9 @@ import {
 // types
 import { AccountAddress, BalanceValue } from '@/app/types/index.type';
 
+// styles
+import styles from './send.module.scss';
+
 /**
  * Sends the funds to the recipient.
  */
@@ -64,12 +67,9 @@ export const Send: FC<{
   };
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '0.125rem',
-    }}>
+    <div className={styles.sendButtonContainer}>
       <button
+        className={styles.sendButton}
         onClick={onClick}
         disabled={isPending}
       >
