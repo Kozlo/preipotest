@@ -75,11 +75,11 @@ export const Send: FC<{
       >
         {isPending ? 'Confirming...' : 'Send'}
       </button>
-      {hash && <div>Transaction Hash: {hash}</div>}
-      {isConfirming && <div>Waiting for confirmation...</div>}
-      {isConfirmed && <div>Transaction confirmed.</div>}
+      {hash && <div className={styles.info}>Transaction Hash: {hash}</div>}
+      {isConfirming && <div className={styles.info}>Waiting for confirmation...</div>}
+      {isConfirmed && <div className={styles.info}>Transaction confirmed.</div>}
       {error && (
-        <div>Error: {(error as BaseError).shortMessage || error.message}</div>
+        <div className={styles.error}>Error: {(error as BaseError).shortMessage || error.message}</div>
       )}
     </div>
   );
